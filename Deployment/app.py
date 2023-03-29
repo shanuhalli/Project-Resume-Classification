@@ -16,7 +16,7 @@ from nltk.tokenize import RegexpTokenizer
 
 st.title('RESUME CLASSIFICATION')
 st.markdown('<style>h1{color: Purple;}</style>', unsafe_allow_html=True)
-st.subheader('Hey, Welcome')
+st.subheader('Welcome to Resume Classification App')
 
 # FUNCTIONS
 def extract_skills(resume_text):
@@ -87,7 +87,7 @@ skills = []
 #-------------------------------------------------------------------------------------------------
 # MAIN CODE
 import pickle as pk
-model = pk.load(open(r'modelRFC.pkl', 'rb'))
+model = pk.load(open(r'modelDT.pkl', 'rb'))
 Vectorizer = pk.load(open(r'vector.pkl', 'rb'))
 
 upload_file = st.file_uploader('Upload Your Resumes', type= ['docx','pdf'],accept_multiple_files=True)
